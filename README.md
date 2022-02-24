@@ -1,5 +1,5 @@
 # SQA-Automation-Test
-The purpose of this project is to test the coding skills of the applicants. 
+The purpose of this project is to test your automation coding skills.
 ## Project Requirements
 
 1. Python >= 3.5.0
