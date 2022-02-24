@@ -14,7 +14,7 @@ The purpose of this project is to test your automation coding skills.
 2. With Pyp install: robotframework and robotframework-selenium2library.
 3. Download the latest stable version of chromedriver.
 4. Create a new branch with your name on this Repository and start a new project.
-5. Create a robot framework test case.
+5. Create the robot framework test case explained below.
 6. Submit a pull request to master.
 
 ## Test case steps
