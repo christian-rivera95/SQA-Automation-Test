@@ -22,5 +22,5 @@ The purpose of this project is to test the coding skills of the applicants.
 2. Use the size filter to select size M and add to cart 1 shirt.
 3. Use the size filter to unselect M size and select L size.
 4. Compulsively add 6 shirts to your cart.
-5. Comeback to your senses and delete 4 shirts from your cart.
+5. Come back to your senses and delete 4 shirts from your cart.
 6. Click checkout button.
