@@ -18,6 +18,7 @@ The purpose of this project is to test your automation coding skills.
 6. Submit a pull request to master.
 
 ## Test case steps
+You can follow [Robotframwork Selenium Documentation](https://robotframework.org/SeleniumLibrary/SeleniumLibrary.html) for guidance and develop the test case in robotframework.
 1. Browse to [React shopping cart demo](https://react-shopping-cart-67954.firebaseapp.com/).
 2. Use the size filter to select size M and add to cart 1 shirt.
 3. Use the size filter to unselect M size and select L size.
