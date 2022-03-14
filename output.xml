@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.3 (Python 3.10.2 on win32)" generated="20220314 07:48:35.682" rpa="false" schemaversion="2">
+<suite id="s1" name="TestCases" source="c:\Users\KHODI\Pictures\SQA-Automation-Test\TestCases.robot">
+<test id="s1-t1" name="TestCases">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://react-shopping-cart-67954.firebaseapp.com/</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220314 07:48:38.440" level="INFO">Opening browser 'Chrome' to base url 'https://react-shopping-cart-67954.firebaseapp.com/'.</msg>
+<status status="PASS" starttime="20220314 07:48:38.440" endtime="20220314 07:48:48.281"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220314 07:48:48.282" endtime="20220314 07:48:48.416"/>
+</kw>
+<kw name="TestCase1">
+<doc>Use the size filter to select size M and add to cart 1 shirt.</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//span[.='M']</arg>
+<arg>timeout=90s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220314 07:48:48.418" endtime="20220314 07:48:48.443"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//span[.='M']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220314 07:48:48.443" level="INFO">Clicking element '//span[.='M']'.</msg>
+<status status="PASS" starttime="20220314 07:48:48.443" endtime="20220314 07:48:48.474"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>20s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220314 07:49:08.482" level="INFO">Slept 20 seconds</msg>
+<status status="PASS" starttime="20220314 07:48:48.474" endtime="20220314 07:49:08.482"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>//button[contains(text(),'Add to cart')]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220314 07:49:08.483" level="INFO">Clicking button '//button[contains(text(),'Add to cart')]'.</msg>
+<status status="PASS" starttime="20220314 07:49:08.483" endtime="20220314 07:49:08.565"/>
+</kw>
+<kw name="Take Screenshot" library="Screenshot">
+<doc>Takes a screenshot in JPEG format and embeds it into the log file.</doc>
+<msg timestamp="20220314 07:49:10.355" level="INFO" html="true">&lt;a href="screenshot_1.jpg"&gt;&lt;img src="screenshot_1.jpg" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220314 07:49:08.565" endtime="20220314 07:49:10.356"/>
+</kw>
+<status status="PASS" starttime="20220314 07:48:48.417" endtime="20220314 07:49:10.356"/>
+</kw>
+<kw name="TestCase2">
+<doc>Use the size filter to unselect M size and select L size.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//span[.='M']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220314 07:49:10.356" level="INFO">Clicking element '//span[.='M']'.</msg>
+<status status="PASS" starttime="20220314 07:49:10.356" endtime="20220314 07:49:10.389"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220314 07:49:20.393" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20220314 07:49:10.389" endtime="20220314 07:49:20.393"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//span[.='L']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220314 07:49:20.394" level="INFO">Clicking element '//span[.='L']'.</msg>
+<status status="PASS" starttime="20220314 07:49:20.393" endtime="20220314 07:49:20.437"/>
+</kw>
+<kw name="Take Screenshot" library="Screenshot">
+<doc>Takes a screenshot in JPEG format and embeds it into the log file.</doc>
+<msg timestamp="20220314 07:49:20.500" level="INFO" html="true">&lt;a href="screenshot_2.jpg"&gt;&lt;img src="screenshot_2.jpg" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220314 07:49:20.437" endtime="20220314 07:49:20.500"/>
+</kw>
+<status status="PASS" starttime="20220314 07:49:10.356" endtime="20220314 07:49:20.501"/>
+</kw>
+<kw name="TestCase3">
+<doc>Compulsively add 6 shirts to your cart.</doc>
+<kw name="Sleep" library="BuiltIn">
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220314 07:49:30.509" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20220314 07:49:20.501" endtime="20220314 07:49:30.509"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>(//button[contains(text(),'Add to cart')])[1]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220314 07:49:30.510" level="INFO">Clicking button '(//button[contains(text(),'Add to cart')])[1]'.</msg>
+<status status="PASS" starttime="20220314 07:49:30.509" endtime="20220314 07:49:30.566"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>(//button[contains(text(),'Add to cart')])[2]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220314 07:49:30.567" level="INFO">Clicking button '(//button[contains(text(),'Add to cart')])[2]'.</msg>
+<status status="PASS" starttime="20220314 07:49:30.566" endtime="20220314 07:49:30.621"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>(//button[contains(text(),'Add to cart')])[3]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220314 07:49:30.623" level="INFO">Clicking button '(//button[contains(text(),'Add to cart')])[3]'.</msg>
+<status status="PASS" starttime="20220314 07:49:30.621" endtime="20220314 07:49:30.671"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>(//button[contains(text(),'Add to cart')])[4]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220314 07:49:30.671" level="INFO">Clicking button '(//button[contains(text(),'Add to cart')])[4]'.</msg>
+<status status="PASS" starttime="20220314 07:49:30.671" endtime="20220314 07:49:30.715"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>//p[contains(text(),'Ringer Hall Pass')]</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20220314 07:49:30.715" endtime="20220314 07:49:31.899"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>(//button[contains(text(),'Add to cart')])[5]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220314 07:49:31.899" level="INFO">Clicking button '(//button[contains(text(),'Add to cart')])[5]'.</msg>
+<status status="PASS" starttime="20220314 07:49:31.899" endtime="20220314 07:49:31.953"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>(//button[contains(text(),'Add to cart')])[6]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220314 07:49:31.953" level="INFO">Clicking button '(//button[contains(text(),'Add to cart')])[6]'.</msg>
+<status status="PASS" starttime="20220314 07:49:31.953" endtime="20220314 07:49:32.006"/>
+</kw>
+<kw name="Take Screenshot" library="Screenshot">
+<doc>Takes a screenshot in JPEG format and embeds it into the log file.</doc>
+<msg timestamp="20220314 07:49:32.063" level="INFO" html="true">&lt;a href="screenshot_3.jpg"&gt;&lt;img src="screenshot_3.jpg" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220314 07:49:32.007" endtime="20220314 07:49:32.063"/>
+</kw>
+<status status="PASS" starttime="20220314 07:49:20.501" endtime="20220314 07:49:32.063"/>
+</kw>
+<kw name="TestCase4">
+<doc>Come back to your senses and delete 4 shirts from your cart.</doc>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>//div[@class='sc-hGPBjI WAKGC']/div[1]/button[@class='sc-bkkeKt oyKqL']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220314 07:49:32.065" level="INFO">Clicking button '//div[@class='sc-hGPBjI WAKGC']/div[1]/button[@class='sc-bkkeKt oyKqL']'.</msg>
+<status status="PASS" starttime="20220314 07:49:32.065" endtime="20220314 07:49:32.120"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220314 07:49:37.135" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20220314 07:49:32.120" endtime="20220314 07:49:37.135"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>//div[@class='sc-hGPBjI WAKGC']/div[2]/button[@class='sc-bkkeKt oyKqL']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220314 07:49:37.136" level="INFO">Clicking button '//div[@class='sc-hGPBjI WAKGC']/div[2]/button[@class='sc-bkkeKt oyKqL']'.</msg>
+<status status="PASS" starttime="20220314 07:49:37.136" endtime="20220314 07:49:37.193"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220314 07:49:42.199" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20220314 07:49:37.193" endtime="20220314 07:49:42.199"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>//div[@class='sc-hGPBjI WAKGC']/div[3]/button[@class='sc-bkkeKt oyKqL']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220314 07:49:42.200" level="INFO">Clicking button '//div[@class='sc-hGPBjI WAKGC']/div[3]/button[@class='sc-bkkeKt oyKqL']'.</msg>
+<status status="PASS" starttime="20220314 07:49:42.199" endtime="20220314 07:49:42.254"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220314 07:49:47.260" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20220314 07:49:42.255" endtime="20220314 07:49:47.260"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>//div[@class='sc-hGPBjI WAKGC']/div[4]/button[@class='sc-bkkeKt oyKqL']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220314 07:49:47.260" level="INFO">Clicking button '//div[@class='sc-hGPBjI WAKGC']/div[4]/button[@class='sc-bkkeKt oyKqL']'.</msg>
+<status status="PASS" starttime="20220314 07:49:47.260" endtime="20220314 07:49:47.314"/>
+</kw>
+<kw name="Take Screenshot" library="Screenshot">
+<doc>Takes a screenshot in JPEG format and embeds it into the log file.</doc>
+<msg timestamp="20220314 07:49:47.363" level="INFO" html="true">&lt;a href="screenshot_4.jpg"&gt;&lt;img src="screenshot_4.jpg" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220314 07:49:47.314" endtime="20220314 07:49:47.363"/>
+</kw>
+<status status="PASS" starttime="20220314 07:49:32.064" endtime="20220314 07:49:47.364"/>
+</kw>
+<kw name="TestCase5">
+<doc>Come back to your senses and delete 4 shirts from your cart.</doc>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>//button[contains(text(),'Checkout')]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220314 07:49:47.365" level="INFO">Clicking button '//button[contains(text(),'Checkout')]'.</msg>
+<status status="PASS" starttime="20220314 07:49:47.365" endtime="20220314 07:49:47.470"/>
+</kw>
+<kw name="Take Screenshot" library="Screenshot">
+<doc>Takes a screenshot in JPEG format and embeds it into the log file.</doc>
+<msg timestamp="20220314 07:49:47.529" level="INFO" html="true">&lt;a href="screenshot_5.jpg"&gt;&lt;img src="screenshot_5.jpg" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220314 07:49:47.470" endtime="20220314 07:49:47.529"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>50s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220314 07:50:37.531" level="INFO">Slept 50 seconds</msg>
+<status status="PASS" starttime="20220314 07:49:47.530" endtime="20220314 07:50:37.531"/>
+</kw>
+<status status="PASS" starttime="20220314 07:49:47.364" endtime="20220314 07:50:37.531"/>
+</kw>
+<status status="PASS" starttime="20220314 07:48:38.439" endtime="20220314 07:50:37.532"/>
+</test>
+<status status="PASS" starttime="20220314 07:48:35.685" endtime="20220314 07:50:37.533"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="TestCases">TestCases</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
