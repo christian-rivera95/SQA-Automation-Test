@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0 (Python 3.10.1 on win32)" generated="20220513 08:48:04.724" rpa="false" schemaversion="3">
+<suite id="s1" name="TC1" source="C:\Users\Joaquin Solorzano\Desktop\selenium-practice\TestCases\TC1.robot">
+<test id="s1-t1" name="React shopping cart test" line="6">
+<kw name="open react site">
+<kw name="Create Webdriver" library="SeleniumLibrary">
+<arg>Chrome</arg>
+<arg>executable_path=C:/WebDrivers/chromedriver.exe</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<msg timestamp="20220513 08:48:04.953" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<status status="PASS" starttime="20220513 08:48:04.953" endtime="20220513 08:48:05.988"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>https://react-shopping-cart-67954.firebaseapp.com/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220513 08:48:05.988" level="INFO">Opening url 'https://react-shopping-cart-67954.firebaseapp.com/'</msg>
+<status status="PASS" starttime="20220513 08:48:05.988" endtime="20220513 08:48:06.628"/>
+</kw>
+<status status="PASS" starttime="20220513 08:48:04.953" endtime="20220513 08:48:06.628"/>
+</kw>
+<kw name="filter M size add 1 to cart and unselect M size">
+<kw name="Wait For Condition" library="SeleniumLibrary">
+<arg>return document.readyState=="complete"</arg>
+<doc>Waits until ``condition`` is true or ``timeout`` expires.</doc>
+<status status="PASS" starttime="20220513 08:48:06.629" endtime="20220513 08:48:06.635"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="root"]/div/main/div/div[1]/div[3]/label/span</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220513 08:48:06.635" level="INFO">Clicking element '//*[@id="root"]/div/main/div/div[1]/div[3]/label/span'.</msg>
+<status status="PASS" starttime="20220513 08:48:06.635" endtime="20220513 08:48:06.681"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@id="root"]/div/main/main/div/div/button</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220513 08:48:06.681" endtime="20220513 08:48:07.136"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>//*[@id="root"]/div/main/main/div/div/button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220513 08:48:07.137" level="INFO">Clicking button '//*[@id="root"]/div/main/main/div/div/button'.</msg>
+<status status="PASS" starttime="20220513 08:48:07.136" endtime="20220513 08:48:07.222"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="root"]/div/main/div/div[1]/div[3]/label/span</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220513 08:48:07.223" level="INFO">Clicking element '//*[@id="root"]/div/main/div/div[1]/div[3]/label/span'.</msg>
+<status status="PASS" starttime="20220513 08:48:07.223" endtime="20220513 08:48:07.254"/>
+</kw>
+<status status="PASS" starttime="20220513 08:48:06.629" endtime="20220513 08:48:07.254"/>
+</kw>
+<kw name="select L size and add 6 items to cart">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="root"]/div/main/div/div[1]/div[5]/label/span</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220513 08:48:07.256" level="INFO">Clicking element '//*[@id="root"]/div/main/div/div[1]/div[5]/label/span'.</msg>
+<status status="PASS" starttime="20220513 08:48:07.255" endtime="20220513 08:48:07.301"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@id="root"]/div/main/main/div/div[1]/button</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220513 08:48:07.301" endtime="20220513 08:48:07.311"/>
+</kw>
+<for flavor="IN RANGE">
+<var>${index}</var>
+<value>1</value>
+<value>7</value>
+<iter>
+<var name="${index}">1</var>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>//*[@id="root"]/div/main/main/div/div[1]/button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220513 08:48:07.312" level="INFO">Clicking button '//*[@id="root"]/div/main/main/div/div[1]/button'.</msg>
+<status status="PASS" starttime="20220513 08:48:07.312" endtime="20220513 08:48:07.383"/>
+</kw>
+<status status="PASS" starttime="20220513 08:48:07.312" endtime="20220513 08:48:07.383"/>
+</iter>
+<iter>
+<var name="${index}">2</var>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>//*[@id="root"]/div/main/main/div/div[1]/button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220513 08:48:07.384" level="INFO">Clicking button '//*[@id="root"]/div/main/main/div/div[1]/button'.</msg>
+<status status="PASS" starttime="20220513 08:48:07.384" endtime="20220513 08:48:07.439"/>
+</kw>
+<status status="PASS" starttime="20220513 08:48:07.383" endtime="20220513 08:48:07.439"/>
+</iter>
+<iter>
+<var name="${index}">3</var>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>//*[@id="root"]/div/main/main/div/div[1]/button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220513 08:48:07.440" level="INFO">Clicking button '//*[@id="root"]/div/main/main/div/div[1]/button'.</msg>
+<status status="PASS" starttime="20220513 08:48:07.439" endtime="20220513 08:48:07.488"/>
+</kw>
+<status status="PASS" starttime="20220513 08:48:07.439" endtime="20220513 08:48:07.488"/>
+</iter>
+<iter>
+<var name="${index}">4</var>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>//*[@id="root"]/div/main/main/div/div[1]/button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220513 08:48:07.488" level="INFO">Clicking button '//*[@id="root"]/div/main/main/div/div[1]/button'.</msg>
+<status status="PASS" starttime="20220513 08:48:07.488" endtime="20220513 08:48:07.532"/>
+</kw>
+<status status="PASS" starttime="20220513 08:48:07.488" endtime="20220513 08:48:07.533"/>
+</iter>
+<iter>
+<var name="${index}">5</var>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>//*[@id="root"]/div/main/main/div/div[1]/button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220513 08:48:07.533" level="INFO">Clicking button '//*[@id="root"]/div/main/main/div/div[1]/button'.</msg>
+<status status="PASS" starttime="20220513 08:48:07.533" endtime="20220513 08:48:07.573"/>
+</kw>
+<status status="PASS" starttime="20220513 08:48:07.533" endtime="20220513 08:48:07.573"/>
+</iter>
+<iter>
+<var name="${index}">6</var>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>//*[@id="root"]/div/main/main/div/div[1]/button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220513 08:48:07.574" level="INFO">Clicking button '//*[@id="root"]/div/main/main/div/div[1]/button'.</msg>
+<status status="PASS" starttime="20220513 08:48:07.574" endtime="20220513 08:48:07.613"/>
+</kw>
+<status status="PASS" starttime="20220513 08:48:07.573" endtime="20220513 08:48:07.613"/>
+</iter>
+<status status="PASS" starttime="20220513 08:48:07.312" endtime="20220513 08:48:07.613"/>
+</for>
+<status status="PASS" starttime="20220513 08:48:07.255" endtime="20220513 08:48:07.614"/>
+</kw>
+<kw name="unselect 4 shirts from cart">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@id="root"]/div/div/div/div[2]/div[2]/div[2]/div/button[1]</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220513 08:48:07.614" endtime="20220513 08:48:07.625"/>
+</kw>
+<for flavor="IN RANGE">
+<var>${index}</var>
+<value>1</value>
+<value>5</value>
+<iter>
+<var name="${index}">1</var>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>//*[@id="root"]/div/div/div/div[2]/div[2]/div[2]/div/button[1]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220513 08:48:07.626" level="INFO">Clicking button '//*[@id="root"]/div/div/div/div[2]/div[2]/div[2]/div/button[1]'.</msg>
+<status status="PASS" starttime="20220513 08:48:07.626" endtime="20220513 08:48:07.673"/>
+</kw>
+<status status="PASS" starttime="20220513 08:48:07.626" endtime="20220513 08:48:07.673"/>
+</iter>
+<iter>
+<var name="${index}">2</var>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>//*[@id="root"]/div/div/div/div[2]/div[2]/div[2]/div/button[1]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220513 08:48:07.673" level="INFO">Clicking button '//*[@id="root"]/div/div/div/div[2]/div[2]/div[2]/div/button[1]'.</msg>
+<status status="PASS" starttime="20220513 08:48:07.673" endtime="20220513 08:48:07.712"/>
+</kw>
+<status status="PASS" starttime="20220513 08:48:07.673" endtime="20220513 08:48:07.712"/>
+</iter>
+<iter>
+<var name="${index}">3</var>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>//*[@id="root"]/div/div/div/div[2]/div[2]/div[2]/div/button[1]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220513 08:48:07.713" level="INFO">Clicking button '//*[@id="root"]/div/div/div/div[2]/div[2]/div[2]/div/button[1]'.</msg>
+<status status="PASS" starttime="20220513 08:48:07.713" endtime="20220513 08:48:07.752"/>
+</kw>
+<status status="PASS" starttime="20220513 08:48:07.713" endtime="20220513 08:48:07.752"/>
+</iter>
+<iter>
+<var name="${index}">4</var>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>//*[@id="root"]/div/div/div/div[2]/div[2]/div[2]/div/button[1]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220513 08:48:07.752" level="INFO">Clicking button '//*[@id="root"]/div/div/div/div[2]/div[2]/div[2]/div/button[1]'.</msg>
+<status status="PASS" starttime="20220513 08:48:07.752" endtime="20220513 08:48:07.795"/>
+</kw>
+<status status="PASS" starttime="20220513 08:48:07.752" endtime="20220513 08:48:07.795"/>
+</iter>
+<status status="PASS" starttime="20220513 08:48:07.625" endtime="20220513 08:48:07.795"/>
+</for>
+<status status="PASS" starttime="20220513 08:48:07.614" endtime="20220513 08:48:07.795"/>
+</kw>
+<kw name="checkout">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@id="root"]/div/div/div/div[3]/button</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220513 08:48:07.796" endtime="20220513 08:48:07.806"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>//*[@id="root"]/div/div/div/div[3]/button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220513 08:48:07.806" level="INFO">Clicking button '//*[@id="root"]/div/div/div/div[3]/button'.</msg>
+<status status="PASS" starttime="20220513 08:48:07.806" endtime="20220513 08:48:07.864"/>
+</kw>
+<status status="PASS" starttime="20220513 08:48:07.796" endtime="20220513 08:48:07.864"/>
+</kw>
+<status status="PASS" starttime="20220513 08:48:04.952" endtime="20220513 08:48:07.865"/>
+</test>
+<status status="PASS" starttime="20220513 08:48:04.726" endtime="20220513 08:48:07.866"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="TC1">TC1</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
