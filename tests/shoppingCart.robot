@@ -23,6 +23,7 @@ Clicking size M option
     Select Size   ${selected_M_Size}
     Wait Until Page Contains Element  ${add_M_shirt}  timeout=5
     Wait Until Element Is Visible  ${add_M_shirt}  timeout=5
+    Sleep   2s
     Click Element  ${add_M_shirt} 
     Click Element  ${close_cart}  
 
