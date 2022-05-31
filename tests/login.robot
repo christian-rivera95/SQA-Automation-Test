@@ -2,44 +2,68 @@
 Library  Selenium2Library
 
 Suite Setup     Open Browser    ${URL}   ${BROWSER}
-Test Setup      My Test Setup      # Before the current test is executed (wait 1 sec)
 
 
 *** Variables ***
 ${URL}  https://react-shopping-cart-67954.firebaseapp.com/
 ${BROWSER}  Chrome
-${search_M_size}     xpath=//span[contains(text(),'M')]
-${search_L_size}     xpath=//div[@class='sc-bj2vay-1 hcyKTa']//label//span[text()='L']
-${size_M_button}      xpath=//div[@class='sc-124al1g-2 keuquD']//button[@class='sc-124al1g-0 jCsgpZ']
-${close_cart}        xpath=//button[@class='sc-1h98xa9-0 gFkyvN']//span[contains(text(),'X')]
-${size_L_button}      xpath=//div[@class='sc-124al1g-2 dwOYCh']//button[@class='sc-124al1g-0 jCsgpZ']
-${delete_from_cart}  xpath=//div[@class='sc-7th5t8-0 jehOnP']//div[2]//div[2]//div[1]//button[1]
-${checkout_button}   xpath=//button[@class='sc-1h98xa9-11 gnXVNU']
+${selected_M_Size}      xpath://*[@id="root"]/div/main/div/div[1]/div[3]/label/span  
+${selected_L_Size}      xpath://*[@id="root"]/div/main/div/div[1]/div[5]/label/span  
+${close_cart}           xpath=//*[@id="root"]/div/div/button
+${add_M_shirt}          xpath://*[@id="root"]/div/main/main/div/div/button
+${add_L_shirts}         xpath://*[@id="root"]/div/main/main/div/div[1]/button
+${delete_from_cart}     xpath=//*[@id="root"]/div/div/div/div[2]/div[2]/div[2]/div/button[1]
+${checkout_button}      xpath=//*[@id="root"]/div/div/div/div[3]/button
 
 
 *** Test Cases ***
 Clicking size M option  
     [documentation]  This test case select size M 
-    Click Element  ${search_M_size}
-    Click Element  ${size_M_button}
+    # Use the size filter to select size M and add to cart 1 shirt.
+    Select Size   ${selected_M_Size}
+    Wait Until Page Contains Element  ${add_M_shirt}  timeout=5
+    Wait Until Element Is Visible  ${add_M_shirt}  timeout=5
+    Click Element  ${add_M_shirt} 
     Click Element  ${close_cart}  
-    Click Element  ${search_M_size}
 
 Clicking size L option 
     [documentation]  This test case select size L 
-    Click Element  ${search_L_size}
+    # Use the size filter to unselect M size and select L size.
+    Select Size   ${selected_M_Size}
+    Select Size  ${selected_L_Size}
+    Sleep   2s
+
+Add to cart
+    [documentation]  This test case adds to cart
+    # Compulsively add 6 shirts to your cart.
+    Add to Cart
+
+Delete from cart
+    [documentation]  This test case delete from cart and do checkout
+    # Compulsively add 6 shirts to your cart.
+    Delete from cart
+
+Do checkout
+    [documentation]  This test case do checkout
+    # Come back to your senses and delete 4 shirts from your cart.
+    Click Element  ${checkout_button}
+    Close All Browsers
+
+
+*** Keywords **
+Close All Browsers
+    Close Browser
+
+Select Size 
+    [Arguments]      ${search_size}
+    Click Element  ${search_size}
+
+Add to Cart
     FOR  ${index}  IN RANGE  6
-        Click Element  ${size_L_button}
+        Click Element  ${add_L_shirts} 
     END
 
-Delete for cart and checkout
-    [documentation]  This test case delete from cart and do checkout
+Delete from cart 
     FOR  ${index}  IN RANGE  4
         Click Element  ${delete_from_cart}
     END
-    Click Element  ${checkout_button}
-
-
-*** Keywords ***
-My Test Setup
-    Sleep    1s
