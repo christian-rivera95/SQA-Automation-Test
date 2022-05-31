@@ -1,3 +1,53 @@
+## How to Run Project
+I added 2 options, with Docker and with Robot Framework.
+
+# First Option (only runs on MacOS):
+
+1. Prerequisites
+* You need to have Python 3.9
+```sh
+brew install python@3.9
+```
+
+* Create Virtual Environment
+```sh
+python3.9 -m venv .env
+```
+
+* Activate Virtual Environment
+```sh
+. .env/bin/activate
+```
+
+2. Install 
+*  [Robot Framework](https://pypi.org/project/robotframework/)
+*  [robotframework-selenium2library](https://pypi.org/project/robotframework-selenium2library/)
+
+  ```sh
+  pip install -r ./requirements.txt
+  ```
+
+3. Run  ```sh
+  robot tests
+  ``` command to run tests.
+
+
+# Second Option:
+
+1. Prerequisites
+Install 
+*  [Docker](https://docs.docker.com/engine/install/)
+
+2. Create Docker container
+Run ```sh
+   docker build -t <container_name> .
+    ```
+3. Run Docker container
+Run ```sh
+   docker run -d -it <container_name> /bin/bash
+    ```
+
+
 # SQA-Automation-Test
 The purpose of this project is to test your automation coding skills.
 ## Project Requirements
